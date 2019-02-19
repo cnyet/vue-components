@@ -1,10 +1,18 @@
 @import "../../../node_modules/normalize.css/normalize.css";
+@import "../../../node_modules/font-awesome/css/font-awesome.min.css";
 @import "./variable.scss";
 
 body{
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  color: $defaultTextColor;
+  background-color: $defaultBgColor;
+  font-family: 'PingFang SC', Helvetica, 'STHeiti STXihei', 'Microsoft YaHei', Tohoma, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
 }
 
 .fade-enter-active, .fade-leave-active {

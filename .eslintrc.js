@@ -25,7 +25,7 @@ module.exports = {
     'generator-star-spacing': 'off',
     // allow debugger during development
     'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
-    'semi': ['error', 'always', {'omitLastInOneLineBlock': true}],  //分号结尾，忽略花括号在同一行的语句块中的最后一个分号
+    'semi': ['warn', 'always', {'omitLastInOneLineBlock': true}],  //分号结尾，忽略花括号在同一行的语句块中的最后一个分号
     'quotes': ['error', 'single', { 'allowTemplateLiterals': true }],  //单引号，允许模板字符串
     'indent': ['error', 2]   //两个空格缩进
   }

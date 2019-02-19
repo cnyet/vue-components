@@ -1,0 +1,26 @@
+@import "../../assets/styles/variable.scss";
+
+.vue-cell{
+  width: 100%;
+  display: flex;
+  padding: 10px 15px;
+  box-sizing: border-box;
+  line-height: 24px;
+  position: relative;
+  background-color: $white;
+  font-size: 14px;
+  color: $defaultTextColor;
+  overflow: hidden;
+  &__title{
+    flex: 1;
+  }
+  &__icon{
+    min-width: 1em;
+    height: 24px;
+    line-height: 24px;
+    font-size: 18px;
+    margin-left: 5px;
+    text-align: center;
+    color: $lightTextColor;
+  }
+}
