@@ -1,12 +1,14 @@
 <template>
-  <div class="vue-collapse">
-    <div class="collapse-head">
+  <div :class="['vue-collapse', showExpand ? 'collapse-expand' : '']">
+    <div class="collapse-head" @click="toggleExpand">
       <div class="collapse-head__title">{{title}}</div>
-      <i class="collapse-head__icon fa fa-angle-down" aria-hidden="true"></i>
+      <i class="collapse-head__icon fa fa-angle-right" aria-hidden="true"></i>
     </div>
-    <div class="collapse-body" v-show="showExpand">
-      <slot></slot>
-    </div>
+    <transition name="slide">
+      <div class="collapse-body">
+        <slot></slot>
+      </div>
+    </transition>
   </div>
 </template>
 

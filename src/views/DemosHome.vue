@@ -26,27 +26,44 @@ export default {
       navData: [{
         title: '基础组件',
         group: [{
-          title: '内容'
+          link: 'javascript:;',
+          title: 'Button 按钮'
+        }, {
+          link: 'javascript:;',
+          title: 'Cell 单元格'
+        }, {
+          link: 'javascript:;',
+          title: 'Icon 图标'
+        }, {
+          link: 'javascript:;',
+          title: 'Layout 布局'
+        }, {
+          link: 'javascript:;',
+          title: 'Popup 弹出层'
         }]
       }, {
         title: '表单组件',
         group: [{
-          title: '内容'
+          link: 'javascript:;',
+          title: 'Button 按钮'
         }]
       }, {
         title: '反馈组件',
         group: [{
-          title: '内容'
+          link: 'javascript:;',
+          title: 'Button 按钮'
         }]
       }, {
         title: '展示组件',
         group: [{
-          title: '内容'
+          link: 'javascript:;',
+          title: 'Button 按钮'
         }]
       }, {
         title: '业务组件',
         group: [{
-          title: '内容'
+          link: 'javascript:;',
+          title: 'Button 按钮'
         }]
       }]
     };

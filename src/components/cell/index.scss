@@ -1,6 +1,8 @@
 @import "../../assets/styles/variable.scss";
 
 .vue-cell{
+  line-height: 1.5;
+  background-color: $white;
   width: 100%;
   display: flex;
   padding: 10px 15px;
@@ -11,6 +13,22 @@
   font-size: 14px;
   color: $defaultTextColor;
   overflow: hidden;
+  &.is-link{
+    &:active{
+      background-color: $linkActiveBgColor;
+    }
+  }
+  &:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    pointer-events: none;
+    box-sizing: border-box;
+    left: 15px;
+    right: 0;
+    bottom: 0;
+    transform: scaleY(0.5);
+    border-bottom: 1px solid $borderColor;
+  }
   &__title{
     flex: 1;
   }

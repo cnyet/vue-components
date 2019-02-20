@@ -1,11 +1,18 @@
 export default {
   name: 'VCell',
   props: {
-    title: String
+    data: Object,
+    isLink: {
+      type: Boolean,
+      default: false
+    }
   },
   data () {
     return {
 
     };
+  },
+  created () {
+
   }
 };

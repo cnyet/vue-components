@@ -9,5 +9,19 @@ export default {
     return {
       showExpand: false
     }
+  },
+  created () {
+
+  },
+  destroyed () {
+
+  },
+  watch: {
+
+  },
+  methods: {
+    toggleExpand () {
+      this.showExpand = !this.showExpand;
+    }
   }
 }

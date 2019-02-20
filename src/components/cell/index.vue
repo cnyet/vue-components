@@ -1,6 +1,7 @@
 <template>
-  <div class="vue-cell">
-    {{title}}
+  <div :class="['vue-cell', isLink ? 'is-link' : '']">
+    <div class="vue-cell__title">{{data.title}}</div>
+    <i class="vue-cell__icon fa fa-angle-right" aria-hidden="true"></i>
   </div>
 </template>
 
