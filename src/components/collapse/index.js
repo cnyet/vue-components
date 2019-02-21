@@ -20,8 +20,12 @@ export default {
 
   },
   methods: {
-    toggleExpand () {
-      this.showExpand = !this.showExpand;
+    toggleExpand(event) {
+      if (this.showExpand) {
+        this.showExpand = false;
+      } else {
+        this.showExpand = true;
+      }
     }
   }
 }

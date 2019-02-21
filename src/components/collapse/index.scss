@@ -43,8 +43,8 @@
   }
   .collapse-body{
     position: relative;
-    display: none;
-    transition: height 0.3s ease-in-out;
+    will-change: height;
+
     &:after{
       content: '';
       position: absolute;
@@ -58,9 +58,9 @@
     }
   }
   .slide-enter, .slide-leave-to {
-
+    height: 100%;
   }
   .slide-enter-active, .slide-leave-active {
-
+    transition: height 0.3s ease-in-out;
   }
 }

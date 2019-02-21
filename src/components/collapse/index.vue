@@ -5,7 +5,7 @@
       <i class="collapse-head__icon fa fa-angle-right" aria-hidden="true"></i>
     </div>
     <transition name="slide">
-      <div class="collapse-body">
+      <div class="collapse-body" v-show="showExpand">
         <slot></slot>
       </div>
     </transition>
