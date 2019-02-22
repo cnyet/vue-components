@@ -2,17 +2,16 @@
 
 .vue-collapse{
   background-color: $white;
+  border-radius: 5px;
+  overflow: hidden;
   &:not(:last-child){
     margin-bottom: 20px;
   }
-  &.collapse-expand{
+  &.expanded{
     .collapse-head{
       &__icon{
         transform: rotate(-90deg);
       }
-    }
-    .collapse-body{
-      display: block;
     }
   }
   .collapse-head{
@@ -34,33 +33,10 @@
       height: 24px;
       line-height: 24px;
       font-size: 18px;
-      margin-left: 5px;
       text-align: center;
       color: $lightTextColor;
       transform: rotate(90deg);
       transition: .3s;
     }
-  }
-  .collapse-body{
-    position: relative;
-    will-change: height;
-
-    &:after{
-      content: '';
-      position: absolute;
-      pointer-events: none;
-      box-sizing: border-box;
-      left: 0;
-      right: 0;
-      top: 0;
-      transform: scaleY(0.5);
-      border-top: 1px solid $borderColor;
-    }
-  }
-  .slide-enter, .slide-leave-to {
-    height: 100%;
-  }
-  .slide-enter-active, .slide-leave-active {
-    transition: height 0.3s ease-in-out;
   }
 }

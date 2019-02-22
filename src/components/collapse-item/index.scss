@@ -1,5 +1,33 @@
 @import "../../assets/styles/variable.scss";
 
-.collapse-item{
-  font-size: 14px;
+.collapse-content{
+  position: relative;
+  overflow: hidden;
+  will-change: height;
+  &:after{
+    content: '';
+    position: absolute;
+    pointer-events: none;
+    box-sizing: border-box;
+    left: 0;
+    right: 0;
+    top: 0;
+    transform: scaleY(0.5);
+    border-top: 1px solid $borderColor;
+  }
+  .collapse-item{
+    font-size: 14px;
+
+  }
+
 }
+.slide-enter, .slide-leave-to {
+  height: 0;
+}
+.slide-enter-active{
+  transition: height 0.4s ease-in-out;
+}
+.slide-leave-active{
+  transition: height 0.3s ease;
+}
+

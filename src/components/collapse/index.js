@@ -7,10 +7,13 @@ export default {
   components: { },
   data () {
     return {
-      showExpand: false
+      show: false
     }
   },
   created () {
+
+  },
+  mounted() {
 
   },
   destroyed () {
@@ -21,11 +24,8 @@ export default {
   },
   methods: {
     toggleExpand(event) {
-      if (this.showExpand) {
-        this.showExpand = false;
-      } else {
-        this.showExpand = true;
-      }
+      this.show = !this.show;
+      this.$emit('change', this.show);
     }
   }
 }

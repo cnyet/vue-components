@@ -1,5 +1,7 @@
 <template>
-  <v-collapse :title="data.title">
+  <v-collapse
+    :title="data.title"
+    @change="changeCollapse">
     <v-collapse-item>
       <v-cell
         v-for="(item, index) in data.group"
@@ -28,8 +30,19 @@ export default {
   },
   data () {
     return {
-
+      expand: false
     };
+  },
+  created () {
+
+  },
+  watch: {
+
+  },
+  methods: {
+    changeCollapse (value) {
+      this.expand = value;
+    }
   }
 };
 </script>
