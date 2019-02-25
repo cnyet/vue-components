@@ -30,7 +30,10 @@ export default {
   },
   data () {
     return {
-      expand: false
+      expand: false,
+      itemObj: {
+        name: 'hello'
+      }
     };
   },
   created () {
