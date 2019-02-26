@@ -1,0 +1,27 @@
+@import "../../assets/styles/variable.scss";
+
+.field-wrapper{
+  &__title{
+    padding: 5px 15px;
+    color: $lightTextColor;
+    font-size: 14px;
+    line-height: 30px;
+  }
+  .field-group{
+    padding: 10px 15px;
+    line-height: 24px;
+    display: flex;
+    box-sizing: border-box;
+    position: relative;
+    background-color: $white;
+    color: $defaultTextColor;
+    font-size: 14px;
+    overflow: hidden;
+    &__content{
+
+    }
+    &__input{
+      outline: none;
+    }
+  }
+}
