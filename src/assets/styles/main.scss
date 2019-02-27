@@ -24,6 +24,7 @@ a {
   -moz-user-select: none;
   text-decoration: none;
   color: $defaultTextColor;
+  outline: none;
 }
 
 .fade-enter-active, .fade-leave-active {

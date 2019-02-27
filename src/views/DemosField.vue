@@ -1,6 +1,12 @@
 <template>
   <div class="field-container">
-    <v-field></v-field>
+    <v-field
+      title="基础用法"
+      labelText="姓名"
+      labelIcon="user"
+      fieldValue="小明"
+      placeholder="请输入姓名"
+      required />
   </div>
 </template>
 
