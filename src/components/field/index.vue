@@ -18,6 +18,7 @@
             @focus="onFocus"
             @blur="onBlur">
           </div>
+          <i v-if="clearable && showClose" class="fa fa-times-circle" aria-hidden="true" @click="close"></i>
           <div class="field-item__error" v-if="invalid">错误</div>
         </div>
       </div>

@@ -6,6 +6,8 @@
       labelIcon="user"
       fieldValue="小明"
       placeholder="请输入姓名"
+      @change="getValue"
+      clearable
       required />
   </div>
 </template>
@@ -14,12 +16,17 @@
 import VField from '../components/field/index.vue';
 export default {
   name: 'DemosField',
+  components: { VField },
   data () {
     return {
 
     };
   },
-  components: { VField }
+  methods: {
+    getValue (value) {
+      console.log(value);
+    }
+  }
 };
 </script>
 

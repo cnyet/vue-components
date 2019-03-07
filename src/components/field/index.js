@@ -1,10 +1,5 @@
 export default {
   name: 'VField',
-  data () {
-    return {
-      value: ''
-    };
-  },
   props: {
     title: {
       type: String,
@@ -41,7 +36,17 @@ export default {
     invalid: {
       type: Boolean,
       default: false
+    },
+    clearable: {
+      type: Boolean,
+      default: false
     }
+  },
+  data () {
+    return {
+      value: '',
+      showClose: false
+    };
   },
   computed: {
 
@@ -53,14 +58,23 @@ export default {
 
   },
   watch: {
-
+    value(value, oldVal) {
+      if (value) {
+        this.showClose = true;
+      } else {
+        this.showClose = false;
+      }
+    }
   },
   methods: {
     onFocus() {
 
     },
     onBlur() {
-      console.log(this.value);
+      this.$emit('change', this.value);
+    },
+    close() {
+      this.value = '';
     }
   }
 }
