@@ -1,10 +1,6 @@
 export default {
   name: 'VField',
   props: {
-    title: {
-      type: String,
-      default: ''
-    },
     fieldValue: {
       type: String,
       default: ''
@@ -38,6 +34,10 @@ export default {
       default: false
     },
     clearable: {
+      type: Boolean,
+      default: false
+    },
+    disabled: {
       type: Boolean,
       default: false
     }
