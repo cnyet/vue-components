@@ -25,7 +25,7 @@ export const HOMENAVS = [{
           link: '',
           title: 'Checkbox 复选框'
         }, {
-          link: '',
+          link: '/radio',
           title: 'Radio 单选框'
         }]
       }, {

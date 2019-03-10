@@ -3,8 +3,8 @@ export default {
   props: {
     checked: Boolean,
     radioText: String
-  }
-  data() {
+  },
+  data () {
     return {
 
     };

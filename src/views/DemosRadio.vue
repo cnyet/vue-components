@@ -11,7 +11,7 @@ export default {
   components: {
     VRadio
   },
-  data() {
+  data () {
     return {
 
     };
@@ -27,7 +27,7 @@ export default {
       this.expand = value;
     }
   }
-}
+};
 </script>
 <style lang="scss">
   @import "../assets/styles/variable.scss";
