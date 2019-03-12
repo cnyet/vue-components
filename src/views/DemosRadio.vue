@@ -1,9 +1,12 @@
 <template>
   <div class="radio-container">
-    <radio-group title="性别" v-model="value" $change="change">
-      <v-radio name="1" radioText="男"></v-radio>
-      <v-radio name="2" radioText="女"></v-radio>
-      <v-radio name="0" radioText="保密"></v-radio>
+    <radio-group
+      title="性别"
+      name="sex"
+      v-model="value">
+      <v-radio value="1">男</v-radio>
+      <v-radio value="2">女</v-radio>
+      <v-radio value="0">保密</v-radio>
     </radio-group>
   </div>
 </template>
@@ -26,14 +29,10 @@ export default {
 
   },
   watch: {
-    value (value, oldVal) {
-      console.log(value);
-    }
+
   },
   methods: {
-    change (value) {
-      console.log('emit');
-    }
+
   }
 };
 </script>

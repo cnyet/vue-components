@@ -2,34 +2,23 @@ export default {
   name: 'RadioGroup',
   props: {
     title: String,
-    value: null
+    name: String,
+    value: String
   },
   data () {
     return {
-
+      currentValue: null,
     };
   },
   watch: {
-    value(value) {
-      this.$emit('change', value);
+    currentValue (value, oldVal) {
+      this.$parent.value = value;
     }
-    // value (value, oldVal) {
-    //   this.$parent.value = value;
-    //   this.$children.forEach(item => {
-    //     if (item.name === value) {
-    //       item.checked = true;
-    //     } else {
-    //       item.checked = false;
-    //     }
-    //   })
-    // }
   },
   created () {
-    console.log(this.value);
+    this.currentValue = this.value;
   },
   methods: {
-    change(value) {
-      console.log('emit');
-    }
+
   }
 };

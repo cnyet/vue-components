@@ -1,9 +1,17 @@
 <template>
-  <div class="radio-wrapper" :name="name">
-    <div class="radio-wrapper__icon" @click="checkRadio(name)">
-      <i :class="['fa', checked ? 'fa-check-circle' : 'fa-circle-thin']" aria-hidden="true"></i>
+  <div class="radio-wrapper">
+    <div class="radio-wrapper__content">
+      <input class="radio-item"
+        :id="radioName+value"
+        type="radio"
+        :name="radioName"
+        :value="value"
+        v-model="$parent.currentValue">
+      <i :class="['fa', $parent.currentValue == value ? 'fa-check-circle' : 'fa-circle-thin']" aria-hidden="true"></i>
+      <label class="radio-label" :for="radioName+value">
+        <slot></slot>
+      </label>
     </div>
-    <span class="radio-wrapper__label" @click="checkRadio(name)">{{radioText}}</span>
   </div>
 </template>
 <script src="./index.js"></script>

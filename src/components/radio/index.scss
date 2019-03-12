@@ -2,8 +2,6 @@
 
 .radio-wrapper{
   padding: 10px 15px;
-  height: 24px;
-  line-height: 24px;
   position: relative;
   background-color: $white;
   color: $defaultTextColor;
@@ -22,22 +20,36 @@
       border-style: solid;
     }
   }
-  &__icon{
-    display: inline-block;
-    vertical-align: middle;
+  &__content{
+    position: relative;
+    line-height: 24px;
     font-size: 22px;
+    padding-left: 32px;
+    .radio-item{
+      width: 1em;
+      height: 1em;
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+    }
+    .radio-label{
+      display: inline-block;
+      min-width: 50px;
+      vertical-align: top;
+      font-size: 16px;
+      color: $defaultTextColor;
+    }
+    .fa{
+      float: left;
+      line-height: 24px;
+      margin-left: -32px;
+    }
     .fa-circle-thin{
       color: $grey;
     }
     .fa-check-circle{
       color: $blueTextColor;
     }
-  }
-  &__label{
-    display: inline-block;
-    vertical-align: middle;
-    margin-left: 5px;
-    font-size: 16px;
-    color: $defaultTextColor;
   }
 }
