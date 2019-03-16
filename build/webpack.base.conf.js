@@ -50,6 +50,10 @@ module.exports = {
             extract: isProduction
           }),
           cssSourceMap: isProduction ? config.build.productionSourceMap : config.dev.cssSourceMap,
+          cssModules: {
+            localIdentName: '[path][name]--[local]--[hash:base64:5]',
+            camelCase: true
+          },
           cacheBusting: config.dev.cacheBusting,
           transformToRequire: {
             video: ['src', 'poster'],

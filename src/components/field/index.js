@@ -7,7 +7,11 @@ export default {
     },
     labelText: {
       type: String,
-      default: ''
+      default: '',
+      required: true,
+      validator: function(value) {
+        return ['test', 'sync', 1].indexOf(value) === -1;
+      }
     },
     required: {
       type: Boolean,

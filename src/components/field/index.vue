@@ -1,5 +1,5 @@
 <template>
-  <div class="field-wrapper">
+  <div :class="$style.fieldWrapper">
     <div :class="['field-wrapper__item', required ? 'required': '']">
       <div class="field-item__label">
         <span class="field-label__icon" v-if="labelIcon">
@@ -25,4 +25,4 @@
 </template>
 
 <script src="./index.js"></script>
-<style lang="scss" src="./index.scss"></style>
+<style lang="scss" src="./index.scss" scoped></style>
