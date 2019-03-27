@@ -4,16 +4,15 @@
       <v-field
         labelText="姓名"
         labelIcon="user"
-        fieldValue="小明"
+        v-model="formData.name"
         placeholder="请输入姓名"
-        @change="getValue"
         clearable
         required />
       <v-field
         labelText="密码"
         type="password"
         placeholder="请输入密码"
-        @change="getValue"
+        v-model="formData.password"
         clearable
         required />
     </cell-group>
@@ -36,7 +35,10 @@ export default {
   components: { VField, CellGroup },
   data () {
     return {
-
+      formData: {
+        name: '小明',
+        password: ''
+      }
     };
   },
   methods: {

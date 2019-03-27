@@ -1,5 +1,5 @@
 <template>
-  <div :class="$style.fieldWrapper">
+  <div class="field-wrapper">
     <div :class="['field-wrapper__item', required ? 'required': '']">
       <div class="field-item__label">
         <span class="field-label__icon" v-if="labelIcon">
@@ -10,12 +10,11 @@
       <div class="field-item__content">
         <div class="field-item__body">
           <input class="field-item__input"
-          v-model="value"
+          :value="value"
+          @input="$emit('input', $event.target.value)"
           :type="type"
           :placeholder="placeholder"
-          :disabled="disabled"
-          @focus="onFocus"
-          @blur="onBlur">
+          :disabled="disabled">
         </div>
         <i v-if="clearable && showClose" class="fa fa-times-circle" aria-hidden="true" @click="close"></i>
         <div class="field-item__error" v-if="invalid">错误</div>

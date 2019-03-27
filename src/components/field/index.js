@@ -1,7 +1,7 @@
 export default {
   name: 'VField',
   props: {
-    fieldValue: {
+    value: {
       type: String,
       default: ''
     },
@@ -48,7 +48,6 @@ export default {
   },
   data () {
     return {
-      value: '',
       showClose: false
     };
   },
@@ -56,7 +55,7 @@ export default {
 
   },
   created () {
-    this.value = this.fieldValue;
+
   },
   destroyed () {
 
