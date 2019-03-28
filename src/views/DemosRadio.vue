@@ -1,12 +1,15 @@
 <template>
   <div class="radio-container">
     <radio-group
-      title="性别"
-      name="sex"
-      v-model="value">
-      <v-radio value="1">男</v-radio>
-      <v-radio value="2">女</v-radio>
-      <v-radio value="0">保密</v-radio>
+      title="性别">
+      <v-radio
+        v-for="(item, index) in radioGroup"
+        :key="index"
+        :value="item.value"
+        name="sex"
+        v-model="radioVal">
+        {{item.label}}
+      </v-radio>
     </radio-group>
   </div>
 </template>
@@ -22,7 +25,17 @@ export default {
   },
   data () {
     return {
-      value: '1'
+      radioVal: null,
+      radioGroup: [{
+        label: '男',
+        value: '1'
+      }, {
+        label: '女',
+        value: '2'
+      }, {
+        label: '保密',
+        value: '0'
+      }]
     };
   },
   created () {

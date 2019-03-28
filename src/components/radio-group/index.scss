@@ -1,7 +1,7 @@
 @import "../../assets/styles/variable.scss";
 .radio-group{
   &__title{
-    padding: 15px 15px 5px;
+    padding: 8px 15px;
     color: $lightTextColor;
     font-size: 14px;
     height: 24px;
@@ -11,6 +11,7 @@
     position: relative;
     background-color: $white;
     overflow: hidden;
+    padding: 0 15px;
     &:after{
       content: "";
       position: absolute;
@@ -24,6 +25,52 @@
       border-width: 1px 0;
       border-color: $borderColor;
       border-style: solid;
+    }
+  }
+  .radio-inline{
+    position: relative;
+    background-color: $white;
+    padding-left: 80px;
+    padding-right: 15px;
+    &:after{
+      content: "";
+      position: absolute;
+      pointer-events: none;
+      box-sizing: border-box;
+      top: -50%;
+      left: -50%;
+      right: -50%;
+      bottom: -50%;
+      transform: scale(0.5);
+      border-width: 1px 0 0;
+      border-color: $borderColor;
+      border-style: solid;
+    }
+    &:last-child{
+      &:after{
+        border-width: 1px 0;
+      }
+    }
+    &__title{
+      color: $lightTextColor;
+      padding: 10px 0;
+      font-size: 14px;
+      height: 24px;
+      line-height: 24px;
+      float: left;
+      width: 65px;
+      margin-left: -65px;
+    }
+    &__content{
+      display: flex;
+      position: relative;
+      background-color: $white;
+      overflow: hidden;
+      .radio-wrapper{
+        &:after{
+          content: none;
+        }
+      }
     }
   }
 }
