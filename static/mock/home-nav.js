@@ -22,7 +22,7 @@ export const HOMENAVS = [{
           link: '/field',
           title: 'Field 输入框'
         }, {
-          link: '',
+          link: '/checkbox',
           title: 'Checkbox 复选框'
         }, {
           link: '/radio',

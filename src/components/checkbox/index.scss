@@ -1,0 +1,70 @@
+@import "../../assets/styles/variable.scss";
+
+.checkbox-wrapper{
+  padding: 10px 15px 10px 25px;
+  position: relative;
+  background-color: $white;
+  color: $defaultTextColor;
+  font-size: 14px;
+  overflow: hidden;
+  line-height: 24px;
+  font-size: 22px;
+  &:not(:last-child){
+    &:after{
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      transform: scaleY(0.5);
+      border-width: 0 0 1px 0;
+      border-color: $borderColor;
+      border-style: solid;
+    }
+  }
+  .checkbox-item{
+    width: 1em;
+    height: 1em;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    opacity: 0;
+  }
+  .checkbox-label{
+    display: inline-block;
+    min-width: 30px;
+    vertical-align: top;
+    font-size: 16px;
+    color: $defaultTextColor;
+  }
+  .fa{
+    float: left;
+    line-height: 24px;
+    margin-left: -25px;
+  }
+  .fa-square-o{
+    color: $grey;
+  }
+  .fa-check-square{
+    color: $blueTextColor;
+  }
+  &__inline{
+    padding-left: 100px;
+    .checkbox-inline__title{
+      width: 100px;
+      overflow: hidden;
+      margin-left: -100px;
+      float: left;
+      line-height: 24px;
+      padding: 10px 0;
+    }
+    .checkbox-inline__body{
+      display: flex;
+    }
+    .checkbox-wrapper__content{
+      &:after{
+        content: none;
+      }
+    }
+  }
+}
