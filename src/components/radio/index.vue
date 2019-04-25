@@ -4,7 +4,7 @@
       :id="name+value"
       type="radio"
       :name="name"
-      :checked="value == checked"
+      :value="value"
       @change="$emit('change', value)">
     <i :class="['fa', value == checked ? 'fa-check-circle' : 'fa-circle-thin']" aria-hidden="true"></i>
     <label class="radio-label" :for="name+value">

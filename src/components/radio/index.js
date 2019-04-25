@@ -5,9 +5,9 @@ export default {
     event: 'change'
   },
   props: {
-    value: String,
     name: String,
-    checked: String || Boolean
+    value: String,
+    checked: [String, Boolean]
   },
   data () {
     return {
