@@ -37,8 +37,11 @@ export const HOMENAVS = [{
       }, {
         title: '展示组件',
         group: [{
-          link: '',
-          title: 'Button 按钮'
+          link: '/count',
+          title: 'count 数字动态递增'
+        }, {
+          link: '/todolist',
+          title: 'todo list'
         }]
       }, {
         title: '业务组件',

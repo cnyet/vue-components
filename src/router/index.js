@@ -4,6 +4,8 @@ import DemosHome from '@/views/DemosHome';
 import DemosField from '@/views/DemosField';
 import DemosRadio from '@/views/DemosRadio';
 import DemoCheckbox from '@/views/DemoCheckbox';
+import DemosCount from '@/views/DemosCount';
+import DemosTodoList from '@/views/DemosTodoList';
 
 Vue.use(Router);
 
@@ -25,6 +27,14 @@ export default new Router({
       path: '/checkbox',
       name: 'DemoCheckbox',
       component: DemoCheckbox
+    }, {
+      path: '/count',
+      name: 'DemosCount',
+      component: DemosCount
+    }, {
+      path: '/todolist',
+      name: 'DemosTodoList',
+      component: DemosTodoList
     }
   ]
 });
