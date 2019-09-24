@@ -11,11 +11,9 @@ import TodoList from '../components/todo-list/index.vue';
 export default {
   name: 'DemosTodoList',
   components: { TodoList },
-  data () {
-    return {
-
-    };
-  }
+  data() {
+    return { };
+  },
 };
 </script>
 <style lang="scss">
