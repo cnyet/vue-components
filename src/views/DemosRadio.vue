@@ -37,15 +37,6 @@ export default {
         value: '0'
       }]
     };
-  },
-  created () {
-
-  },
-  watch: {
-
-  },
-  methods: {
-
   }
 };
 </script>

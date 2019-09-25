@@ -36,12 +36,6 @@ export default {
       }
     };
   },
-  created () {
-
-  },
-  watch: {
-
-  },
   methods: {
     changeCollapse (value) {
       this.expand = value;

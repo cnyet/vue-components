@@ -10,10 +10,7 @@
 import TodoList from '../components/todo-list/index.vue';
 export default {
   name: 'DemosTodoList',
-  components: { TodoList },
-  data() {
-    return { };
-  },
+  components: { TodoList }
 };
 </script>
 <style lang="scss">

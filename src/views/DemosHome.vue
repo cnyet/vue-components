@@ -1,7 +1,7 @@
 <template>
   <div class="demosHome-container">
     <h1 class="demosHome-title">
-      <img class="logo" src="../assets/images/logo.png" alt="logo">
+      <img class="logo" src="../assets/logo.png" alt="logo">
     </h1>
     <h4 class="demosHome-desc">移动端UI组件库</h4>
     <demos-nav
@@ -14,7 +14,7 @@
 
 <script>
 import DemosNav from './DemosNav.vue';
-import { HOMENAVS } from '../../static/mock/home-nav.js';
+import { HOMENAVS } from '../mock/home-nav.ts';
 
 export default {
   name: 'DemosHome',
@@ -26,21 +26,6 @@ export default {
     return {
       navData: HOMENAVS
     };
-  },
-  computed: {
-
-  },
-  created () {
-
-  },
-  destroyed () {
-
-  },
-  watch: {
-
-  },
-  methods: {
-
   }
 };
 </script>

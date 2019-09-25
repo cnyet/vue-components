@@ -4,23 +4,10 @@ export default {
     title: String,
     group: Array
   },
-  components: { },
   data () {
     return {
       show: false
     }
-  },
-  created () {
-
-  },
-  mounted() {
-
-  },
-  destroyed () {
-
-  },
-  watch: {
-
   },
   methods: {
     toggleExpand(event) {

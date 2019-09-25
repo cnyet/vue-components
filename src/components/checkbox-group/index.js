@@ -3,19 +3,5 @@ export default {
   props: {
     title: String,
     inline: Boolean
-  },
-  data () {
-    return {
-
-    };
-  },
-  watch: {
-
-  },
-  created () {
-
-  },
-  methods: {
-
   }
 };

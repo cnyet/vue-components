@@ -8,9 +8,6 @@ export default {
     value: String,
     checked: Array
   },
-  computed: {
-
-  },
   data () {
     return {
       isChecked: false,

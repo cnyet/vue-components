@@ -51,15 +51,6 @@ export default {
       showClose: false
     };
   },
-  computed: {
-
-  },
-  created () {
-
-  },
-  destroyed () {
-
-  },
   watch: {
     value(value, oldVal) {
       if (value) {
@@ -70,9 +61,7 @@ export default {
     }
   },
   methods: {
-    onFocus() {
-
-    },
+    onFocus() {},    // tslint: disable-line
     onBlur() {
       this.$emit('change', this.value);
     },

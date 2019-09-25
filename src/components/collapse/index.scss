@@ -26,6 +26,7 @@
     color: $defaultTextColor;
     overflow: hidden;
     &__title{
+      font-weight: bold;
       flex: 1;
     }
     &__icon{

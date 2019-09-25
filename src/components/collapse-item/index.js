@@ -12,9 +12,6 @@ export default {
       return this.$parent.show;
     }
   },
-  created () {
-
-  },
   watch: {
     expand(newVal, oldVal) {
       this.$nextTick(() => {

@@ -8,19 +8,5 @@ export default {
     name: String,
     value: String,
     checked: [String, Boolean]
-  },
-  data () {
-    return {
-
-    };
-  },
-  computed: {
-
-  },
-  created () {
-
-  },
-  methods: {
-
   }
 }

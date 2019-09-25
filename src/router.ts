@@ -16,34 +16,35 @@ export default new Router({
     {
       path: '/',
       name: 'DemosHome',
-      component: DemosHome,
+      component: DemosHome
     }, {
       path: '/field',
       name: 'DemosField',
-      component: DemosField,
+      component: DemosField
     }, {
       path: '/radio',
       name: 'DemosRadio',
-      component: DemosRadio,
+      component: DemosRadio
     }, {
       path: '/checkbox',
       name: 'DemoCheckbox',
-      component: DemoCheckbox,
+      component: DemoCheckbox
     }, {
       path: '/count',
       name: 'DemosCount',
-      component: DemosCount,
+      component: DemosCount
     }, {
       path: '/todolist',
       name: 'DemosTodoList',
-      component: DemosTodoList,
-    }, {
-      path: '/about',
-      name: 'about',
-      // route level code-splitting
-      // this generates a separate chunk (about.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import(/* webpackChunkName: "about" */ './views/About.vue'),
-    },
-  ],
+      component: DemosTodoList
+    }
+    // {
+    //   path: '/about',
+    //   name: 'about',
+    //   // route level code-splitting
+    //   // this generates a separate chunk (about.[hash].js) for this route
+    //   // which is lazy-loaded when the route is visited.
+    //   component: () => import(/* webpackChunkName: "about" */ './views/About.vue')
+    // }
+  ]
 });
