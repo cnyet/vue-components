@@ -1,14 +1,26 @@
 <template>
   <div class="count-container">
-    <v-count>3268701</v-count>
+    <count-up :value="countValue">
+      <template v-slot:header="{head: title}">
+        {{title}}
+      </template>
+      <template v-slot:footer="slotScope">
+        {{slotScope.data.firstName}}
+      </template>
+    </count-up>
   </div>
 </template>
 
 <script >
-import VCount from '../components/count/index.vue';
+import CountUp from '../components/count-up/index.vue';
 export default {
   name: 'DemosCount',
-  components: { VCount }
+  components: { CountUp },
+  data() {
+    return {
+      countValue: 3268701
+    };
+  }
 };
 </script>
 <style lang="scss">

@@ -1,7 +1,10 @@
 @import "../../assets/styles/variable.scss";
 
 .count-wrapper{
-  font-size: 20px;
-  color: orange;
+  font-size: 24px;
   font-weight: bold;
+  main{
+    margin: 20px 0;
+    color: orange;
+  }
 }
