@@ -30,7 +30,7 @@ export default new Router({
       name: 'DemoCheckbox',
       component: DemoCheckbox
     }, {
-      path: '/countup',
+      path: '/count',
       name: 'DemosCount',
       component: DemosCount
     }, {

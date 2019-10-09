@@ -30,6 +30,7 @@
         "esSpecCompliant": true
       }
     ],     // 禁用数组，对象，方法结尾的逗号
-    "no-console": [true, "warn", "error", "info"]   // 修改禁用console的规则
+    "no-console": [true, "warn", "error", "info"],   // 修改禁用console的规则,
+    "only-arrow-functions": false   // 禁止只允许箭头函数
   }
 }
