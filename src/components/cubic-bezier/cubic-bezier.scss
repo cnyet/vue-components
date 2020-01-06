@@ -1,0 +1,23 @@
+@import '../../styles/colors.scss';
+
+.cubic-bezier{
+  path {
+    stroke: #4E8BA1;
+    fill: none;
+    stroke-width: 1;
+    stroke-linecap: round;
+  }
+  text {
+    display: inline-block;
+    line-height: 20px;
+  }
+  .item {
+    border-bottom: 1px dashed rgba(0,0,0,0.5);
+    padding: 5px;
+   }
+  .circle {
+    stroke-width: 6;
+    stroke: #108ee9;
+    fill: none;
+  }
+}

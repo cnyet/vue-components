@@ -6,6 +6,7 @@ import DemosRadio from '@/views/DemosRadio.vue';
 import DemoCheckbox from '@/views/DemoCheckbox.vue';
 import DemosCount from '@/views/DemosCount.vue';
 import DemosTodoList from '@/views/DemosTodoList.vue';
+import DemosLazyLoad from '@/views/DemosLazyLoad.vue';
 
 Vue.use(Router);
 
@@ -37,6 +38,10 @@ export default new Router({
       path: '/todolist',
       name: 'DemosTodoList',
       component: DemosTodoList
+    }, {
+      path: '/lazyload',
+      name: 'DemosLazyLoad',
+      component: DemosLazyLoad
     }
     // {
     //   path: '/about',

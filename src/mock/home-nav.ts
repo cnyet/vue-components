@@ -42,6 +42,9 @@ export const HOMENAVS = [{
   }, {
     link: '/todolist',
     title: 'todo list'
+  }, {
+    link: '/lazyload',
+    title: 'lazy load images'
   }]
 }, {
   title: '业务组件',
