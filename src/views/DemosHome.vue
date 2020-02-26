@@ -15,6 +15,7 @@
 <script>
 import DemosNav from './DemosNav.vue';
 import { HOMENAVS } from '../mock/home-nav.ts';
+import api from '../api';
 
 export default {
   name: 'DemosHome',
@@ -26,6 +27,17 @@ export default {
     return {
       navData: HOMENAVS
     };
+  },
+  created() {
+    this.$http.get(api.test, {
+      params: {
+        name: 'hello'
+      }
+    }).then(function(res) {
+
+    }).catch(function(err) {
+
+    });
   }
 };
 </script>
