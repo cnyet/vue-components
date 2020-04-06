@@ -9,6 +9,7 @@
       </template>
     </count-up>
     <h4>倒计时</h4>
+    <input v-focus>
     <count-down v-show="showCount" class="count" :start="status" @finish="onFinish"></count-down>
     <button class="btn" @click="onClick">开始倒计时</button>
   </div>

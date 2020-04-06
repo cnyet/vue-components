@@ -9,6 +9,8 @@
       :key="index"
       :data="item">
     </demos-nav>
+    <component :is="currentComponent"></component>
+    <button @click="changeComponent">切换公共组件</button>
   </div>
 </template>
 
@@ -25,7 +27,8 @@ export default {
   },
   data () {
     return {
-      navData: HOMENAVS
+      navData: HOMENAVS,
+      currentComponent: 'component-a'
     };
   },
   created() {
@@ -38,6 +41,11 @@ export default {
     }).catch(function(err) {
 
     });
+  },
+  methods: {
+    changeComponent() {
+      this.currentComponent = 'component-b';
+    }
   }
 };
 </script>
