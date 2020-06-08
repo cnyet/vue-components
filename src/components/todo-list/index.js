@@ -1,5 +1,10 @@
+import MyTodo from './MyTodo.jsx';
+
 export default {
   name: 'TodoList',
+  components: {
+    MyTodo
+  },
   data () {
     return {
       list: [{
@@ -24,5 +29,10 @@ export default {
         name: 'Sarah'
       }]
     }
+  },
+  methods: {
+    onChangeHandle(value) {
+      console.log(value);
+    } 
   }
 }

@@ -7,8 +7,8 @@
         </slot>
       </li>
     </ul>
+    <my-todo message="todo" :change="onChangeHandle"></my-todo>
   </div>
 </template>
-
 <script src="./index.js"></script>
 <style lang="scss" src="./index.scss" scoped></style>

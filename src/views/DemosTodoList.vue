@@ -1,9 +1,11 @@
 <template>
-  <todo-list>
-    <template v-slot:todo="{ todo }">
-      <span v-if="todo.index > 3">{{todo.name}} ✓</span>
-    </template>
-  </todo-list>
+  <div>
+    <todo-list>
+      <template v-slot:todo="{ todo }">
+        <span v-if="todo.index > 3">{{todo.name}} ✓</span>
+      </template>
+    </todo-list>
+  </div>
 </template>
 
 <script>
@@ -13,6 +15,6 @@ export default {
   components: { TodoList }
 };
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
 
 </style>
