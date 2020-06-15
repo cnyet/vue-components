@@ -54,7 +54,7 @@ export default {
 .demosHome-container{
   padding: 50px 15px 20px;
   .demosHome-title{
-    margin: 0;
+    margin: 10px auto;
     text-align: center;
     .logo{
       width: 36px;
@@ -65,6 +65,7 @@ export default {
   .demosHome-desc{
     text-align: center;
     font-weight: normal;
+    padding: 15px;
   }
   .demosHome-nav{
 
