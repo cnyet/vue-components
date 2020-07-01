@@ -9,6 +9,7 @@ const plugins = require.context('./plugins/', false, /\.ts$/);
 plugins.keys().forEach(plugins);
 
 Vue.use(Toast);
+
 Vue.config.productionTip = false;
 
 new Vue({

@@ -4,12 +4,20 @@
 import Vue from 'vue';
 
 Vue.component('component-a', {
-  data: function() {
+  data() {
     return {
       name: 'Component'
     };
   },
   render(h) {
-    return h('h3', this.name);
-  } 
+    const self: any = this;
+    return h('h3', self.name);
+  }
+});
+
+
+Vue.component('component-b', {
+  render (h) {
+    return h('h1', 123);
+  }
 });

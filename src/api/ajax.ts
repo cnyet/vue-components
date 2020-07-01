@@ -12,16 +12,16 @@ export interface ResponseData {
 }
 
 // 添加请求时拦截器
-axios.interceptors.request.use((config) => {
+axios.interceptors.request.use((config: object) => {
   return config;
-}, (error) => {
+}, (error: object) => {
   return Promise.reject(error);
 });
 
 // 添加响应时的拦截器
-axios.interceptors.response.use((response) => {
+axios.interceptors.response.use((response: any) => {
   return response.data;
-}, (error) => {
+}, (error: object) => {
   return Promise.reject(error);
 });
 
@@ -33,11 +33,11 @@ axios.interceptors.response.use((response) => {
  * @param    {[type]}   params 请求传递的参数
  * @param    {[type]}   config 请求额外的配置信息
  */
-function GET(url, params, config) {
+function GET(url: string, params: object, config: any) {
   return new Promise((resolve, reject) => {
-    axios.get(url, params, config).then((res) => {
+    axios.get(url, { ...params, ...config}).then((res: any) => {
       resolve(res.data);
-    }).catch((err) => {
+    }).catch((err: any) => {
       reject(err);
     });
   });
@@ -51,19 +51,19 @@ function GET(url, params, config) {
  * @param    {[type]}   data   请求传递的参数
  * @param    {[type]}   config 请求额外的配置信息
  */
-function POST(url, data, config) {
+function POST(url: string, data: object, config: any) {
   return new Promise((resolve, reject) => {
     const defaultConfig = {
       transformRequest: [
-        function(requestData, headers) {
+        function(requestData: object, headers: any) {
           headers['Content-Type'] = 'application/json';
           return JSON.stringify(requestData);
         }
       ]
     };
-    axios.post(url, data, (config || defaultConfig)).then((res) => {
+    axios.post(url, data, (config || defaultConfig)).then((res: any) => {
       resolve(res.data);
-    }).catch((err) => {
+    }).catch((err: any) => {
       reject(err);
     });
   });
@@ -77,19 +77,19 @@ function POST(url, data, config) {
  * @param    {[type]}   data   请求传递的参数
  * @param    {[type]}   config 请求额外的配置信息
  */
-function PUT(url, data, config) {
+function PUT(url: string, data: object, config: any) {
   return new Promise((resolve, reject) => {
     const defaultConfig = {
       transformRequest: [
-        function(requestData, headers) {
+        function(requestData: object, headers: any) {
           headers['Content-Type'] = 'application/json';
           return JSON.stringify(requestData);
         }
       ]
     };
-    axios.put(url, data, (config || defaultConfig)).then((res) => {
+    axios.put(url, data, (config || defaultConfig)).then((res: any) => {
       resolve(res.data);
-    }).catch((err) => {
+    }).catch((err: any) => {
       reject(err);
     });
   });
@@ -103,19 +103,19 @@ function PUT(url, data, config) {
  * @param    {[type]}   data   请求传递的参数
  * @param    {[type]}   config 请求额外的配置信息
  */
-function PATCH(url, data, config) {
+function PATCH(url: string, data: object, config: any) {
   return new Promise((resolve, reject) => {
     const defaultConfig = {
       transformRequest: [
-        function(requestData, headers) {
+        function(requestData: object, headers: any) {
           headers['Content-Type'] = 'application/json';
           return JSON.stringify(requestData);
         }
       ]
     };
-    axios.patch(url, data, (config || defaultConfig)).then((res) => {
+    axios.patch(url, data, (config || defaultConfig)).then((res: any) => {
       resolve(res.data);
-    }).catch((err) => {
+    }).catch((err: any) => {
       reject(err);
     });
   });
@@ -129,11 +129,11 @@ function PATCH(url, data, config) {
  * @param    {[type]}   data   请求传递的参数
  * @param    {[type]}   config 请求额外的配置信息
  */
-function DELETE (url, config) {
+function DELETE (url: string, config: object) {
   return new Promise(function(resolve, reject) {
-    axios.delete(url, config).then(function(res) {
+    axios.delete(url, config).then(function(res: any) {
       resolve(res.data);
-    }).catch(function(err) {
+    }).catch(function(err: any) {
       reject(err);
     });
   });

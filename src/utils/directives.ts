@@ -3,8 +3,8 @@
  */
 import Vue from 'vue';
 
-Vue.directive('focus', function () {
-  inserted: function(el) {
+Vue.directive('focus', {
+  inserted(el) {
     console.log(el);
     el.focus();
   }

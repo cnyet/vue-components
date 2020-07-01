@@ -47,7 +47,7 @@ export default {
       <div>
         <ButtonCounter
           style={{marginTop: '10px'}}
-          type="button"
+          type='button'
           count={count}
           onChange={onChange}>
         </ButtonCounter>

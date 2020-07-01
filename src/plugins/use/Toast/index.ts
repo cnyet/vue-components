@@ -1,30 +1,46 @@
 /**
  * toast 插件
  */
-import Vue from 'vue';
-import MyToast from './toast.jsx';
+// import MyToast from './toast.jsx';
 
 class Toast {
-  static install () {
-    // extend
+  static node = null;
+  public static install (Vue: any, options: any) {
     const MyExtend = Vue.extend({
-      data: function() {
+      data() {
         return {
+          status: false,
           firstName: 'Walter',
           lastName: 'White',
           alias: 'Heisenberg'
         };
       },
-      render (h) {
-        // return <MyToast></MyToast>;
+      render (h: function) {
+        const self: any = this;
         return h(
           'p',
-          `${this.firstName} ${this.lastName} aka ${this.alias}`
+          {
+            attrs: {
+              id: 'bar'
+            },
+            style: {
+              display: self.status ? 'block': 'none',
+            }
+          },
+          `${self.firstName} ${self.lastName} aka ${self.alias}`
         );
       }
     });
-    const node = new MyExtend().$mount();
-    document.body.appendChild(node.$el);
+    this.node = new MyExtend().$mount();
+    document.body.appendChild(this.node.$el);
+  }
+  static show() {
+    this.node.status = true;
+    console.log('show');
+  }
+  static hide() {
+    this.node.status = false;
+    console.log('hide');
   }
 }
 

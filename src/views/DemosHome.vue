@@ -10,13 +10,14 @@
       :data="item">
     </demos-nav>
     <component :is="currentComponent"></component>
-    <button @click="changeComponent">切换公共组件</button>
+    <button @click="toggleToast">显示/隐藏Toast组件</button>
   </div>
 </template>
 
 <script>
 import DemosNav from './DemosNav.vue';
-import { HOMENAVS } from '../mock/home-nav.ts';
+import { HOMENAVS } from '../api/mock/home-nav.ts';
+import Toast from '../plugins/use/Toast';
 import api from '../api';
 
 export default {
@@ -31,20 +32,15 @@ export default {
       currentComponent: 'component-a'
     };
   },
-  created() {
-    this.$http.get(api.test, {
-      params: {
-        name: 'hello'
-      }
-    }).then(function(res) {
-
-    }).catch(function(err) {
-
-    });
-  },
   methods: {
-    changeComponent() {
-      this.currentComponent = 'component-b';
+    toggleToast() {
+      if (Toast.node.status) {
+        Toast.hide();
+        this.currentComponent = 'component-a';
+      } else {
+        Toast.show();
+        this.currentComponent = 'component-b';
+      }
     }
   }
 };
