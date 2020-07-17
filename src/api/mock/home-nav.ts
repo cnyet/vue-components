@@ -52,4 +52,10 @@ export const HOMENAVS = [{
     link: '',
     title: 'Button 按钮'
   }]
+}, , {
+  title: '其他组件',
+  group: [{
+    link: '/anchor',
+    title: 'Anchor 锚点'
+  }]
 }];

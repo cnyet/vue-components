@@ -7,6 +7,7 @@ import DemoCheckbox from '@/views/DemoCheckbox.vue';
 import DemosCount from '@/views/DemosCount.vue';
 import DemosTodoList from '@/views/DemosTodoList.vue';
 import DemosLazyLoad from '@/views/DemosLazyLoad.vue';
+import Anchor from '@/components/anchor/index.vue';
 
 Vue.use(Router);
 
@@ -42,6 +43,10 @@ export default new Router({
       path: '/lazyload',
       name: 'DemosLazyLoad',
       component: DemosLazyLoad
+    }, {
+      path: '/anchor',
+      name: 'Anchor',
+      component: Anchor
     }
     // {
     //   path: '/about',
