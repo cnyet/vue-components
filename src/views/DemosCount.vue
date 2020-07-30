@@ -57,4 +57,43 @@ export default {
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.12);
   box-shadow: 0 2px 0 rgba(0, 0, 0, 0.045);
 }
+.star_five{
+  margin: 50px 0;
+  position: relative;
+  display: block;
+  color: $rank-bg;
+  width: 0px;
+  height: 0px;
+  border-right:  100px solid transparent;
+  border-bottom: 70px  solid $rank-bg;
+  border-left:   100px solid transparent;
+  transform:    rotate(35deg);
+  &:before{
+    border-bottom: 80px solid $rank-bg;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    position: absolute;
+    height: 0;
+    width: 0;
+    top: -45px;
+    left: -65px;
+    display: block;
+    content: '';
+    transform: rotate(-35deg);
+  }
+  &:after{
+    position: absolute;
+    display: block;
+    color: $rank-bg;
+    top: 3px;
+    left: -105px;
+    width: 0px;
+    height: 0px;
+    border-right: 100px solid transparent;
+    border-bottom: 70px solid $rank-bg;
+    border-left: 100px solid transparent;
+    transform: rotate(-70deg);
+    content: '';
+  }
+}
 </style>
