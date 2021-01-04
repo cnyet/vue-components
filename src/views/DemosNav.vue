@@ -21,7 +21,13 @@ import VCell from '../components/cell/index.vue';
 export default {
   name: 'DemosNav',
   props: {
-    data: Object
+    data: {
+      type: Object,
+      default: () => ({
+        title: '',
+        group: []
+      })
+    }
   },
   components: {
     VCollapse,

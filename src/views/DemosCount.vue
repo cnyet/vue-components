@@ -1,3 +1,10 @@
+<!--
+ * @Descripttion:
+ * @Author: 天泽
+ * @Date: 2020-05-06 11:15:43
+ * @LastEditors: 天泽
+ * @LastEditTime: 2020-09-11 18:20:44
+-->
 <template>
   <div class="count-container">
     <count-up :value="countValue">
@@ -61,15 +68,15 @@ export default {
   margin: 50px 0;
   position: relative;
   display: block;
-  color: $rank-bg;
+  color: #f7f7f7;
   width: 0px;
   height: 0px;
   border-right:  100px solid transparent;
-  border-bottom: 70px  solid $rank-bg;
+  border-bottom: 70px  solid #f7f7f7;
   border-left:   100px solid transparent;
   transform:    rotate(35deg);
   &:before{
-    border-bottom: 80px solid $rank-bg;
+    border-bottom: 80px solid #f7f7f7;
     border-left: 30px solid transparent;
     border-right: 30px solid transparent;
     position: absolute;
@@ -84,13 +91,13 @@ export default {
   &:after{
     position: absolute;
     display: block;
-    color: $rank-bg;
+    color: #f7f7f7;
     top: 3px;
     left: -105px;
     width: 0px;
     height: 0px;
     border-right: 100px solid transparent;
-    border-bottom: 70px solid $rank-bg;
+    border-bottom: 70px solid #f7f7f7;
     border-left: 100px solid transparent;
     transform: rotate(-70deg);
     content: '';

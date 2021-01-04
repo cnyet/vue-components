@@ -1,4 +1,4 @@
-<!--  --><template>
+<template>
   <div class="field-container">
     <cell-group title="基础用法">
       <v-field

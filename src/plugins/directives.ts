@@ -1,3 +1,10 @@
+/*
+ * @Descripttion:
+ * @Author: 天泽
+ * @Date: 2020-06-05 18:52:58
+ * @LastEditors: 天泽
+ * @LastEditTime: 2020-09-11 17:36:46
+ */
 /**
  * 全局注册vue指令
  */

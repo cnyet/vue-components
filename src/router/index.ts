@@ -8,6 +8,7 @@ import DemosCount from '@/views/DemosCount.vue';
 import DemosTodoList from '@/views/DemosTodoList.vue';
 import DemosLazyLoad from '@/views/DemosLazyLoad.vue';
 import Anchor from '@/components/anchor/index.vue';
+import DialPanel from '@/views/DemoDialPanel.vue';
 
 Vue.use(Router);
 
@@ -47,6 +48,10 @@ export default new Router({
       path: '/anchor',
       name: 'Anchor',
       component: Anchor
+    }, {
+      path: '/dialPanel',
+      name: 'DialPanel',
+      component: DialPanel
     }
     // {
     //   path: '/about',

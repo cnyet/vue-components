@@ -14,10 +14,3 @@ Vue.component('component-a', {
     return h('h3', self.name);
   }
 });
-
-
-Vue.component('component-b', {
-  render (h) {
-    return h('h1', 123);
-  }
-});

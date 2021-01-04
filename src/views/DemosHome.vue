@@ -10,14 +10,12 @@
       :data="item">
     </demos-nav>
     <component :is="currentComponent"></component>
-    <button @click="toggleToast">显示/隐藏Toast组件</button>
   </div>
 </template>
 
 <script>
 import DemosNav from './DemosNav.vue';
 import { HOMENAVS } from '../api/mock/home-nav.ts';
-import Toast from '../plugins/use/Toast';
 import api from '../api';
 
 export default {
@@ -31,17 +29,6 @@ export default {
       navData: HOMENAVS,
       currentComponent: 'component-a'
     };
-  },
-  methods: {
-    toggleToast() {
-      if (Toast.node.status) {
-        Toast.hide();
-        this.currentComponent = 'component-a';
-      } else {
-        Toast.show();
-        this.currentComponent = 'component-b';
-      }
-    }
   }
 };
 </script>
