@@ -9,6 +9,7 @@ import DemosTodoList from '@/views/DemosTodoList.vue';
 import DemosLazyLoad from '@/views/DemosLazyLoad.vue';
 import Anchor from '@/components/anchor/index.vue';
 import DialPanel from '@/views/DemoDialPanel.vue';
+import Carousel from '@/views/CarouselGroup.vue';
 
 Vue.use(Router);
 
@@ -52,6 +53,10 @@ export default new Router({
       path: '/dialPanel',
       name: 'DialPanel',
       component: DialPanel
+    }, {
+      path: '/carousel',
+      name: 'Carousel',
+      component: Carousel
     }
     // {
     //   path: '/about',

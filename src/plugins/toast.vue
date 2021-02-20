@@ -3,13 +3,13 @@
  * @Author: 天泽
  * @Date: 2020-09-11 17:37:47
  * @LastEditors: 天泽
- * @LastEditTime: 2021-01-04 16:13:12
+ * @LastEditTime: 2021-01-04 19:24:31
 -->
 <template>
   <div>
     <div class="toast"  ref='toastPosition' :class="{active: toastHidden}">
       <div class="toast-warpper">
-         {{text}}
+        {{number}}
       </div>
     </div>
   </div>
@@ -18,16 +18,19 @@
 <script>
 export default {
   name: 'Toast',
+  props: {
+    text: [String, Number]
+  },
   data () {
     return {
-      text: '',
       toastHidden: false
     };
   },
-  created () {
-    // this.toastPlugin()
-  },
-  components: {
+  computed: {
+    number() {
+      this.toastPlugin(this.text);
+      return this.text;
+    }
   },
   methods: {
     toastPlugin (msg, time) {
@@ -35,7 +38,7 @@ export default {
       this.toastHidden = true;
       setTimeout(() => {
         this.toastHidden = false;
-      }, time);
+      }, 500);
     }
   }
 };
@@ -53,12 +56,12 @@ export default {
     background: rgba(0, 0, 0, 0.5);
     border-radius: 5px;
     color: #fff;
-    transition: all 0.5s;
+    transition: opacity 0.5s;
     z-index: -1;
     opacity: 0;
   }
   .toast.active {
-    width: 150px;
+    width: 100px;
     min-height: 25px;
     opacity: 1;
     z-index: 11;

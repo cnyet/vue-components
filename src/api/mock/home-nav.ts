@@ -40,6 +40,9 @@ export const HOMENAVS = [{
     link: '/count',
     title: 'count 数字动态递增'
   }, {
+    link: '/carousel',
+    title: '轮播图'
+  }, {
     link: '/todolist',
     title: 'todo list'
   }, {

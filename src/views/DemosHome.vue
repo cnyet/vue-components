@@ -9,14 +9,17 @@
       :key="index"
       :data="item">
     </demos-nav>
-    <component :is="currentComponent"></component>
   </div>
 </template>
 
 <script>
+import Vue from 'vue';
 import DemosNav from './DemosNav.vue';
 import { HOMENAVS } from '../api/mock/home-nav.ts';
+// import ProgressBar from '@/plugins/progress-bar';
 import api from '../api';
+
+// Vue.use(ProgressBar);
 
 export default {
   name: 'DemosHome',
@@ -26,8 +29,7 @@ export default {
   },
   data () {
     return {
-      navData: HOMENAVS,
-      currentComponent: 'component-a'
+      navData: HOMENAVS
     };
   }
 };
